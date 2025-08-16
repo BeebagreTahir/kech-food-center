@@ -630,7 +630,7 @@ footer{
 
     @media (max-width: 492px) {
         .logo {
-            gap: 35vw;
+            /* gap: 35vw; */
         }
 
         .delivering-to {
@@ -691,7 +691,7 @@ footer{
 
     @media (max-width: 367px) {
          .logo {
-            gap: 20vw;
+             gap: 20vw; 
         }
 
         .delivering-to {
