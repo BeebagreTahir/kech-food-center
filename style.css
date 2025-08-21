@@ -664,7 +664,7 @@ footer{
         }.manu-card-cointainer h4{
             font-size: 13px;
         }.manu-card-cointainer p{
-            font-size: 9px;
+            font-size: px;
         }#nav-dropdown{
             outline: none;
         }
@@ -675,6 +675,9 @@ footer{
     @media (max-width: 394px) {
         .logo {
             gap: 90px;
+        }.pizza-section-boxes p{
+            height: 30px;
+            font-size: 9px;
         }
 
         .nav3 h3 {
