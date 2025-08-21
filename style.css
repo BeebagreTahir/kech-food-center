@@ -270,6 +270,11 @@ nav {
 
 }
 
+.pizza-section-boxes p{
+    width: 200px;
+    height: 70px;
+}
+
 .pizza-section-boxes img {
     border-radius: 10px 10px 0px 0;
     width: 100%;
