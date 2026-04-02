@@ -5,6 +5,108 @@
     font-family: 'Poppins';
 }
 
+/* POPUP CARD */
+/* POPUP CARD */
+.popup-card {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7); /* darker background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;      /* Bigger width */
+    max-width: 700px; /* Max width for large screens */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    position: relative;
+    animation: popup-show 0.3s ease;
+}
+
+.popup-content img {
+    border-radius: 15px;
+    margin-bottom: 20px;
+    width: 100%; /* Image takes full width inside popup */
+    
+    max-height: 400px; /* Optional: prevent very tall images */
+    object-fit: cover;
+}
+
+.popup-content h3 {
+    margin-bottom: 10px;
+    font-size: 28px; /* Bigger title */
+}
+
+.popup-content p {
+    font-size: 18px; /* Bigger description */
+    margin-bottom: 15px;
+}
+
+.popup-content h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.popup-content button {
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff4d4d;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.popup-content button:hover {
+    background-color: #e60000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px; /* Bigger X */
+    cursor: pointer;
+}
+
+/* Animation */
+@keyframes popup-show {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive for smaller devices */
+@media (max-width: 600px) {
+    .popup-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .popup-content h3 {
+        font-size: 22px;
+    }
+
+    .popup-content p, .popup-content h4 {
+        font-size: 16px;
+    }
+
+    .popup-content button {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+}
+/* pop card finished */
+
 html{
     scroll-behavior: smooth;
 }
@@ -270,11 +372,6 @@ nav {
 
 }
 
-.pizza-section-boxes p{
-    width: 200px;
-    height: 70px;
-}
-
 .pizza-section-boxes img {
     border-radius: 10px 10px 0px 0;
     width: 100%;
@@ -532,9 +629,9 @@ footer{
         font-size: 15px;
     }.manu-card-cointainer h5 span{
         font-size: 15px;
-    }.pizza-section-boxes img{
-        /* height: 180px; */
-    }.manu-card-cointainer h4{
+    /* }.pizza-section-boxes img{
+        height: 180px; 
+    }.manu-card-cointainer h4{ */
         font-size: 13px;
     }.manu-card-cointainer h4 a{
         font-size: 18px;
@@ -544,7 +641,7 @@ footer{
         gap: 10px;
         width: auto;
         margin-bottom: 50px;
-        margin-bottom: ;
+        /* margin-bottom: ; */
     }
 
 }
@@ -597,10 +694,10 @@ footer{
         padding-left: 1px;
     }
 
-    .nav2 {
-        /* padding-left: 10px;
-        gap: 5px; */
-    }
+    /* .nav2 {
+        padding-left: 10px;
+        gap: 5px;
+    } */
 
     .nav2 .items a {
         font-size: 16px;
@@ -612,16 +709,16 @@ footer{
     }.bottom-nav-items{
         font-size: 14px;
         
-    }.nav3 h3{
-        /* margin-top: -10px; */
-    }
+    /* }.nav3 h3{
+        margin-top: -10px;
+    } */
 
 }
 
 @media (max-width: 725px) {
-    .total-nav {
-        /* width: 100vw; */
-    }
+    /* .total-nav {
+        width: 100vw; 
+    } */
 
     .logo {
         gap: 40vw;
@@ -664,7 +761,7 @@ footer{
         }.manu-card-cointainer h4{
             font-size: 13px;
         }.manu-card-cointainer p{
-            font-size: px;
+            font-size: 9px;
         }#nav-dropdown{
             outline: none;
         }
@@ -675,9 +772,6 @@ footer{
     @media (max-width: 394px) {
         .logo {
             gap: 90px;
-        }.pizza-section-boxes p{
-            height: 46px;
-            font-size: 9px;
         }
 
         .nav3 h3 {
@@ -690,9 +784,6 @@ footer{
             margin-left: 10px;
         }.pizza-section-boxes{
             width: 95%;
-        }.nav2{
-            /* padding-top: 20px;
-            padding-left: 20px; */
         }.nav3{
             margin-top: 10px;
         }
@@ -733,8 +824,6 @@ footer{
             margin-bottom: 0px;
         }.pizza-section-boxes{
             width: 97%;
-        }.pizza-section{
-            gap
         }#section-heading{
             width: 90%;
         }#nav-dropdown{
@@ -743,5 +832,7 @@ footer{
             font-size: ;
         } 
 
-    }
+    
+
+    
     
