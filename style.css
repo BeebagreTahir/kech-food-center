@@ -73,10 +73,12 @@
 
 .close-btn {
     position: absolute;
-    top: 15px;
+    top: 20px;
     right: 20px;
-    font-size: 28px; /* Bigger X */
+    font-size: 38px; /* Bigger X */
     cursor: pointer;
+    border-radius: 90%;
+    background-color: rgba(0, 0, 0, 0.271);
 }
 
 /* Animation */
@@ -382,7 +384,7 @@ nav {
     width: 100%;
     height: auto;
     padding: 12px 15px;
-    padding-left: 7px;
+    padding-left: 5px;
 }
 
 
