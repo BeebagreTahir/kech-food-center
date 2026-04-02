@@ -382,6 +382,7 @@ nav {
     width: 100%;
     height: auto;
     padding: 12px 15px;
+    padding-left: 7px;
 }
 
 
@@ -629,9 +630,9 @@ footer{
         font-size: 15px;
     }.manu-card-cointainer h5 span{
         font-size: 15px;
-    /* }.pizza-section-boxes img{
-        height: 180px; 
-    }.manu-card-cointainer h4{ */
+    }.pizza-section-boxes img{
+        /* height: 180px; */
+    }.manu-card-cointainer h4{
         font-size: 13px;
     }.manu-card-cointainer h4 a{
         font-size: 18px;
