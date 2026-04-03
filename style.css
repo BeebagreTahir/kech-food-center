@@ -371,6 +371,7 @@ nav {
     width: 15.25vw;
     flex-wrap: nowrap;
     cursor: pointer;
+    /* height: 400px; */
 
 }
 
@@ -835,7 +836,212 @@ footer{
             font-size: ;
         } 
 
-    
+    /* For mobile truncation */
+@media (max-width: 492px) {
+    .manu-card-cointainer p {
+        display: -webkit-box;       /* Needed for truncation */
+        -webkit-line-clamp: 2;      /* Show only 1 line */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 9px;             /* Already in your CSS */
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}
+    /* Laptop & large screen adjustments */
+@media (min-width: 1001px) and (max-width: 1650px) {
+    .pizza-section {
+        grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+        gap: 20px; /* space between cards */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
-    
-    
+    .pizza-section-boxes {
+        width: 100%;   /* Full width of the grid column */
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        background-color: #fff;
+    }
+
+    .pizza-section-boxes:hover {
+        transform: translateY(-5px); /* subtle lift on hover */
+        box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+    }
+
+    .pizza-section-boxes img {
+        width: 100%;
+        height: 200px; /* larger image for laptop */
+        object-fit: cover;
+        border-bottom: 1px solid #eee;
+    }
+
+    .manu-card-cointainer {
+        padding: 15px;
+        height: auto;
+    }
+
+    .manu-card-cointainer h4 {
+        font-size: 1.5vw;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+    }
+
+    .manu-card-cointainer h4 a {
+        font-size: 1.7vw;
+        color: red;
+        text-align: right;
+    }
+
+    .manu-card-cointainer p {
+        font-size: 1.1vw;
+        color: #555;
+        margin-top: 10px;
+        line-height: 1.4;
+    }
+
+    .manu-card-cointainer h5 {
+        margin-top: 15px;
+        font-size: 1.2vw;
+        font-weight: 600;
+    }
+
+    .manu-card-cointainer h5 span {
+        color: rgba(0, 76, 255, 0.6);
+        font-size: 1.3vw;
+    }
+}
+
+/* Laptop & large screen cards */
+@media (min-width: 1001px) and (max-width: 1650px) {
+    .pizza-section {
+        grid-template-columns: repeat(4, 1fr); /* 4 cards per row for laptop */
+        gap: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .pizza-section-boxes {
+        width: 100%;
+        height: auto;           /* Adjust height automatically */
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+
+    .pizza-section-boxes:hover {
+        transform: translateY(-5px); /* Slight hover lift */
+    }
+
+    .pizza-section-boxes img {
+        width: 100%;            /* Full width of card */
+        height: 250px;          /* Bigger image */
+        object-fit: cover;      /* Fill without distortion */
+        border-radius: 15px 15px 0 0;
+        transition: transform 0.3s;
+    }
+
+    .pizza-section-boxes:hover img {
+        transform: scale(1.05); /* Zoom effect on hover */
+    }
+
+    .manu-card-cointainer {
+        padding: 15px;
+    }
+
+    .manu-card-cointainer h4 {
+        font-size: 1.3vw;
+    }
+
+    .manu-card-cointainer h4 a {
+        font-size: 1.5vw;
+    }
+
+    .manu-card-cointainer p {
+        font-size: 1vw;
+        margin-top: 10px;
+    }
+
+    .manu-card-cointainer h5 {
+        font-size: 1.1vw;
+        margin-top: 15px;
+    }
+}
+/* Align form (quantity/input) and RS (price) horizontally in cards */
+@media (min-width: 1001px) {
+    .manu-card-cointainer .price-quantity {
+        display: flex;              /* horizontal layout */
+        justify-content: space-between; /* push form left, price right */
+        align-items: center;        /* vertically center them */
+        margin-top: 10px;
+    }
+
+    .manu-card-cointainer .price-quantity input {
+        width: 50px;                /* small uniform input width */
+        padding: 5px;
+        font-size: 1vw;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .manu-card-cointainer .price-quantity span {
+        font-size: 1.1vw;           /* price size */
+        font-weight: 600;
+        color: red;
+    }
+}
+
+/* Center Today's Special on mobile */
+@media (max-width: 600px) {
+    .todays-special {
+        display: block;
+        text-align: center;    /* center-align text */
+        padding: 10px 15px;
+        font-size: 14px;       /* adjust size for mobile */
+        font-weight: 600;
+        color: #b21f1f;        /* highlight color */
+        margin: 15px 0;        /* spacing from other elements */
+    }
+}
+
+.nav2 .items a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Hover effect (temporary) */
+.nav2 .items a:hover {
+    color: #b21f1f;
+}
+
+/* Active section highlight */
+.nav2 .items.active a {
+    color: #b21f1f !important;
+    font-weight: 700;
+}
+
+.nav2 .items.active a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #fdbb2d;
+}
