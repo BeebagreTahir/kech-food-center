@@ -26,6 +26,7 @@ nav {
     gap: 30px;
     margin-left: 20px;
     height: auto;
+    margin-top: -3px;
 }
 
 .delivery-dropdown { display: flex; flex-direction: column; }
@@ -115,7 +116,7 @@ nav {
 }
 
 /* ── HERO ── */
-.hero-img { margin-top: 185px; margin-left: 20px; }
+.hero-img { margin-top: 185px; margin-left: 30px; }
 
 /* ── SECTION HEADINGS ── */
 #section-heading-roll,
