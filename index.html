@@ -1,160 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kech Food Center - Turbat's Best Food Ordering</title>
     <meta name="description" content="Order delicious burgers, pizza, BBQ, and more from Kech Food Center, Turbat. Fast delivery and fresh taste.">
-
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./images/bb4d6e33f181fa58432a39a27a107d66.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
-
 <body>
-    <!-- POPUP CARD -->
-<div class="popup-card" id="popup-card">
-    <div class="popup-content">
-        <span class="close-btn" id="close-btn">&times;</span>
-        <img src="" alt="Food Image" id="popup-img" width="250px">
-        <h3 id="popup-title">Food Name</h3>
-        <p id="popup-desc">Food description goes here.</p>
-        <h4>Price: <span id="popup-price">Rs. 0</span></h4>
-        <button id="add-to-cart">Add to Cart</button>
+
+    <!-- POPUP OVERLAY -->
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-card" id="popup-card">
+            <button class="popup-close" id="popup-close">&#x2715;</button>
+            <img src="" alt="" id="popup-img">
+            <div class="popup-body">
+                <h3 id="popup-name"></h3>
+                <p id="popup-desc"></p>
+                <div id="popup-size-section"></div>
+                <button class="popup-add-btn" id="popup-add-btn">Add to Cart</button>
+            </div>
+        </div>
     </div>
-</div>
 
-
-
-
-   <!-- <div class="total-nav"> -->
-     <nav>
+    <!-- NAV -->
+    <nav>
         <div class="logo">
-            <div style="margin-top: -30px;">
-            <a href="index.html"><img src="./images/kfc_turbat_logo edited.png" height="" width="100px"
-                    alt="KFC logo"></a>
-                </div>
-        <div class="delivery-dropdown">
-            <div class="delivering-to">Delivering to</div>
-            <select name="" id="nav-dropdown">
-                <option>Please Select ...</option>
-                <option value="">Absor</option>
-                <option value="">Satlite town</option>
-                <option value="">Overseas</option>
-                <option value="">B&R Colong</option>
-                <option value="">Turbat Bazar</option>
-            </select>
+            <div style="margin-top:-30px;">
+                <a href="index.html"><img src="./images/kfc_turbat_logo edited.png" width="100px" alt="Kech Food Center Logo"></a>
+            </div>
+            <div class="delivery-dropdown">
+                <div class="delivering-to">Delivering to</div>
+                <select id="nav-dropdown">
+                    <option>Please Select ...</option>
+                    <option>Absor</option>
+                    <option>Satlite Town</option>
+                    <option>Overseas</option>
+                    <option>B&R Colony</option>
+                    <option>Turbat Bazar</option>
+                </select>
+            </div>
         </div>
-    </div>
-
         <div class="nav-items">
-            <div class="manu"><a href="#">MANU</a></div>
-            <div class="store"><a href="#">STORE</a></div>
-            <div class="get-the-app"><a href="#">GET THE APP</a></div>
+            <div><a href="#">MENU</a></div>
+            <div><a href="#">STORE</a></div>
+            <div><a href="#">GET THE APP</a></div>
         </div>
-
-
         <div class="nav-icons">
             <div class="nav-icons-cart"><a href="./addtocart/addtocart.html"><i class="ri-shopping-cart-line"></i></a></div>
-
-            <div class="nav-icons-cart"><a href="#"><i class="ri-user-3-line"></i><span>My Account</span></a></div>
+            <div><a href="#"><i class="ri-user-3-line"></i> <span>My Account</span></a></div>
         </div>
-
     </nav>
 
+    <!-- NAV2 -->
     <div class="nav2">
-        <div class="items"><a style="margin-left: 0px;" href="#section-heading-pizza">Pizzas</a></div>
+        <div class="items"><a href="#section-heading-pizza">Pizzas</a></div>
         <div class="items"><a href="#section-heading-burger">Burgers</a></div>
-        <div class="items" style="padding-left: 0px;"><a href="#section-heading-bbq">BBQ</a></div>
+        <div class="items"><a href="#section-heading-bbq">BBQ</a></div>
         <div class="items"><a href="#section-heading-roll">Rolls</a></div>
         <div class="items"><a href="#section-heading-fries">Fries</a></div>
         <div class="items"><a href="#section-heading-friedchicken">Fried Chicken</a></div>
-        <div class="items" style="margin-left: 0px;"><a href="#section-heading-sandwich">Sandwiches</a></div> 
+        <div class="items"><a href="#section-heading-sandwich">Sandwiches</a></div>
         <div class="items"><a href="#section-heading-extra">Extras</a></div>
     </div>
 
+    <!-- NAV3 -->
     <div class="nav3">
         <h3>Today's Special: Family Bucket for only RS.1599!</h3>
     </div>
-   <!-- </div> -->
 
-   <div class="hero-section">
-    
-   </div>
-
-
-<div class="">
-    <img class="hero-img" src="./images/domino copy hero.png"  alt="" width="97%" style="border-radius: 20px;">
-</div>
-
-   <div class="menu-container"></div>
-
-
-<footer>
-    <div class="footer-box01">
-        <h4>KECH FOOD CENTER</h4>
-        <li><a href="">About us</a></li>
-        <li><a href="">Privacy policy</a></li>
-        <li><a href="">Terms & Conditions</a></li>
-        <li><a href="">Nutritional Info</a></li>
-        <li><a href="">Dawnload Manu</a></li>
+    <!-- HERO -->
+    <div>
+        <img class="hero-img" src="./images/domino copy hero.png" alt="Hero Banner" width="97%" style="border-radius:20px;">
     </div>
 
-    <div class="footer-box02">
-        <h4>Contact</h4>
-        <div><a href="tel:03352053652">Call us</a></div>
-        <div><a href="">Feedback</a></div>
-    </div>
+    <!-- MENU -->
+    <div class="menu-container"></div>
 
-    <div class="footer-box03">
-        <h4>Help</h4>
-       <div> <a href="">Track order</a></div>
-        <div><a href="">Store Finder</a></div>
-    </div>
-    
-    <div class="footer-social-media-handdle">
-        <h5 style="padding-bottom: 10px; margin-left: 39px;">Follow us</h5>
-        <div class="logos">
-
-            <div><i class="fa-brands fa-facebook-f"></i></div>
-            <div><i class="fa-brands fa-instagram"></i></div>
-            <div><i class="fa-brands fa-x-twitter"></i></div>
-            <div><i class="fa-brands fa-youtube"></i></div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-box01">
+            <h4>KECH FOOD CENTER</h4>
+            <ul>
+                <li><a href="">About us</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms & Conditions</a></li>
+                <li><a href="">Nutritional Info</a></li>
+                <li><a href="">Download Menu</a></li>
+            </ul>
         </div>
-
-        <div class="app">
-
+        <div class="footer-box02">
+            <h4>Contact</h4>
+            <div><a href="tel:03352053652">Call us</a></div>
+            <div><a href="">Feedback</a></div>
         </div>
+        <div class="footer-box03">
+            <h4>Help</h4>
+            <div><a href="">Track Order</a></div>
+            <div><a href="">Store Finder</a></div>
+        </div>
+        <div class="footer-social-media-handdle">
+            <h5 style="padding-bottom:10px;">Follow us</h5>
+            <div class="logos">
+                <div><i class="fa-brands fa-facebook-f"></i></div>
+                <div><i class="fa-brands fa-instagram"></i></div>
+                <div><i class="fa-brands fa-x-twitter"></i></div>
+                <div><i class="fa-brands fa-youtube"></i></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTTOM NAV -->
+    <div class="bottom-nav">
+        <a href="#" class="bottom-nav-items"><i class="fa-regular fa-circle-user"></i><span>My Account</span></a>
+        <a href="#" class="bottom-nav-items"><i class="fa-solid fa-store"></i><span>Store</span></a>
+        <a href="#" class="bottom-nav-items"><i class="fa-solid fa-utensils"></i><span>Menu</span></a>
+        <a href="#" class="bottom-nav-items"><i class="ri-e-bike-2-fill"></i><span>Track Order</span></a>
+        <a href="./addtocart/addtocart.html" class="bottom-nav-items"><i class="ri-shopping-cart-line"></i><span>My Cart</span></a>
     </div>
-</footer>
 
-
-<div class="bottom-nav">
-    <a href="#"  class="bottom-nav-items"><i class="fa-regular fa-circle-user"></i> <span>My Account</span></a>
-
-    <a href="#"  class="bottom-nav-items"><i class="fa-solid fa-store"></i> <span>Store</span></a>
-
-    <a href="#"  class="bottom-nav-items"><i class="fa-solid fa-utensils"></i> <span>Manu</span></a>    
-
-    <a href="#"  class="bottom-nav-items"><i class="ri-e-bike-2-fill"></i> <span>Track order</span></a>
-
-    <a href="./addtocart/addtocart.html"  class="bottom-nav-items"><i class="ri-shopping-cart-line"></i> <span>My Carts</span></a>
-</div>
-
-<script src="script.js">
-</script>
+    <script src="script.js"></script>
 </body>
-
 </html>
